@@ -9,6 +9,24 @@ return {
         local arttoggle = false
 
         local logo = {
+            
+
+
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
+            [[                                                    ]],
             [[                                                    ]],
             [[ ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ]],
             [[ ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ]],
@@ -45,7 +63,7 @@ return {
             dashboard.section.header.val = logo
         end
         dashboard.section.buttons.val = {
-            dashboard.button("f", " " .. "Find files", ":Telescope find_files <CR>"),
+            dashboard.button("f", "" .. "Find files", ":Telescope find_files <CR>"),
             dashboard.button("F", " " .. "Find text", ":Telescope live_grep <CR>"),
             dashboard.button("c", " " .. "Config", ":e $MYVIMRC <CR>"),
             dashboard.button("l", "󰚰 " .. "LazyUI", ":Lazy <CR>"),
