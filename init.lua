@@ -58,7 +58,7 @@ vim.opt.splitbelow = true
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
+--
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
@@ -555,7 +555,7 @@ require('lazy').setup({
           { name = 'nvim_lua' },
           { name = 'fuzzy_buffer' },
         },
-        completion = { completeopt = 'menu,menuone,noinsert' },
+        completion = { completeopt = 'menu,menuone,noselect' },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
