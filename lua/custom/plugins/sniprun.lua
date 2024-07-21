@@ -1,11 +1,10 @@
 return {
     {
-        "michaelb/sniprun",
-        branch = "master",
+        -- "michaelb/sniprun",
+        -- branch = "master",
+        dir = "/home/michael/ExperimentBox/sniprun",
 
-        build = "sh install.sh",
-        -- do 'sh install.sh 1' if you want to force compile locally
-        -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+        build = "sh install.sh 1",
 
         config = function()
           require("sniprun").setup({

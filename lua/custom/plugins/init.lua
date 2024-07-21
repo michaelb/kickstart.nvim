@@ -39,7 +39,4 @@ return {
             },
         }
     },
-    {
-        "mhinz/vim-crates"
-    }
 }
