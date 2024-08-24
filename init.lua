@@ -1,5 +1,3 @@
--- Set <space> as the leader key
--- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -103,6 +101,9 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<leader>r', '<Plug>SnipRun', { desc = 'Run line/snippet', silent = true})
+vim.keymap.set('v', '<leader>r', '<Plug>SnipRun', { desc = 'Run selection', silent = true})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -543,7 +544,10 @@ require('lazy').setup({
       'kdheepak/cmp-latex-symbols',
       'Saecki/crates.nvim',
       'hrsh7th/cmp-nvim-lua',
-      'tzachar/cmp-fuzzy-buffer',
+      {
+        dir = "~/ExperimentBox/cmp-nixpkgs-maintainers"
+      }
+      -- 'tzachar/cmp-fuzzy-buffer',
     },
     config = function()
       -- See `:help cmp`
@@ -560,7 +564,8 @@ require('lazy').setup({
           { name = 'cmp_lsp_rs' },
           { name = 'latex_symbols' },
           { name = 'nvim_lua' },
-          { name = 'fuzzy_buffer' },
+          -- { name = 'nixpkgs_maintainers' },
+          -- { name = 'fuzzy_buffer' },
         },
         completion = { completeopt = 'menu,menuone,noselect' },
 
