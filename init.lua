@@ -35,6 +35,8 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+-- map U to redo
+vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true })
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
