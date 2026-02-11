@@ -650,18 +650,6 @@ require('lazy').setup {
 
       cmp.setup {
 
-        sources = {
-          { name = 'nvim_lsp' },
-          -- { name = 'fuzzy_path' },
-          { name = 'path' },
-          { name = 'crates' },
-          { name = 'calc' },
-          { name = 'cmp_lsp_rs' },
-          { name = 'latex_symbols' },
-          { name = 'nvim_lua' },
-          -- { name = 'nixpkgs_maintainers' },
-          -- { name = 'fuzzy_buffer' },
-        },
         completion = { completeopt = 'menu,menuone,noselect' },
 
         -- For an understanding of why these mappings were
@@ -685,7 +673,7 @@ require('lazy').setup {
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          ['<CR>'] = cmp.mapping.confirm { select = false },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
           -- ['<S-Tab>'] = cmp.mapping.select_prev_item(),
           ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -752,6 +740,8 @@ require('lazy').setup {
             group_index = 0,
           },
           { name = 'nvim_lsp' },
+          { name = 'cmp_lsp_rs' },
+          { name = 'latex_symbols' },
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'calc' },
