@@ -273,7 +273,7 @@ require('lazy').setup {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
-    branch = '0.1.x',
+    branch = 'master',
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -517,7 +517,7 @@ require('lazy').setup {
       local servers = {
         clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -578,9 +578,7 @@ require('lazy').setup {
   {
     'Saecki/crates.nvim',
     config = function()
-      require('crates').setup {
-        completion = { cmp = { enabled = true } },
-      }
+      require('crates').setup {}
     end,
   },
   { -- Autoformat
